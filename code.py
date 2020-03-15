@@ -20,6 +20,7 @@ while True:
         
         reversed_address = [adv.address.address_bytes[i] for i in range(5, -1, -1)]
         sensor_address = "{:02x}{:02x}{:02x}{:02x}{:02x}{:02x}".format(*reversed_address)
+        print(sensor_address)
         if adv.complete_name == "TestingLight" or MyLightClient in adv.services:
             print("Found: ",sensor_address)
             
